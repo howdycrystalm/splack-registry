@@ -15,12 +15,26 @@
     cursor: pointer;
     background-color: #2196f3;
     font-family: Tahoma, Helvetica, sans-serif;
-    margin-top: 20px;
+    font-weight: bold;
+    color: #fffafa;
+}
+
+.button:hover {
+  transform:scale(1.05);
+}
+
+body {
+  background-color: #fffafa;
 }
 
 h3 {
   font-family: Tahoma, Helvetica , sans-serif
   font-size: 15px;
+}
+
+a {
+  color: #fffafa;
+  text-decoration: none;
 }
 
 /***** MODAL *****/
@@ -42,9 +56,6 @@ h3 {
     transform: translate(-50%, -50%);
     width: 80%;
     padding: 20px;
-    /*display: flex;
-    justify-content: center;
-    text-align: center;*/
 }
 
 #modal-button {
@@ -58,6 +69,10 @@ h3 {
   border: none;
   cursor: pointer;
   background-color: #2196f3;
+}
+
+#modal-button:hover {
+  transform:scale(1.05);
 }
 
 .modal-box {
@@ -91,27 +106,27 @@ h3 {
 
 /**********  CAROUSEL **********/
 .home-container {
+  z-index: 1;
   width:100%;
   height: 100vh;
   background-color: #fffafa;
   flex-direction: column;
+
 }
 
 .header {
   z-index: 4;
-  background-color: red;
+  background-color: #FF6347;
   width: 300px;
   height: 40px;
   font-family: 'Cherry Swash', cursive;
   font-size: 24px;
   color: #fffafa;
-  position: relative;
+  position: absolute;
   top: 40px;
   left: 25px;
-  position: fixed;
 }
 
-/* Slideshow container */
 .slideshow-container {
   width: 1100px;
   height: 500px;
@@ -124,22 +139,51 @@ h3 {
   overflow: hidden;
 }
 
+.slideshow-button {
+  margin-top: 20px;
+}
+
 .copenhagen {
-  width: 800px;
-  height: 500px;
+
   background: url('http://www.ewallpapers.eu/sites/default/files/copenhagen-68510-5975054.jpg');
 }
 
 .oslo {
-  width: 800px;
-  height: 500px;
+
   background: url('https://3.bp.blogspot.com/-1JXpX8lw8os/VwZustG-vRI/AAAAAAAAA2c/V0-pcldzkQEYq8MuOZjlc_UbyYWQvZzAw/s1600/oslo.jpg');
 }
 
 .warnemunde {
-  width: 800px;
-  height: 500px;
+
   background: url('https://upload.wikimedia.org/wikipedia/commons/9/95/Alter_Strom.jpg');
+}
+
+.any {
+  background: url('https://www.seafarercruises.com/wp-content/uploads/2016/05/Calm-morning-in-Husavik-harbor-in-Northern-Iceland-MEDIUM.jpg');
+}
+
+.dinner {
+  background: url('https://tomostyle.files.wordpress.com/2011/03/pa230698.jpg');
+}
+
+.tallinn {
+  background: url('http://www.traveller.ee/blog/wp-content/uploads/2015/06/Riga_1835066391-620x414.jpg');
+}
+
+.helsinki {
+  background: url('http://cuckooreview.com/wp-content/uploads/2015/01/Helsinki%E2%80%99s-Finland.jpg');
+}
+
+.amsterdam {
+  background: url('https://lonelyplanetimages.imgix.net/mastheads/stock-photo-beautiful-amsterdam-76796579.jpg?sharp=10&vib=20&w=1200');
+}
+
+.st-petersburg {
+  background: url('http://travelchannel.sndimg.com/content/dam/images/travel/fullset/2014/06/30/1d/cathedral-spilled-blood-st-petersburg-russia.rend.tccom.966.544.jpeg');
+}
+
+.massage {
+  background: url('https://media-cdn.tripadvisor.com/media/photo-s/04/bd/be/11/the-palms-spa-aveda.jpg');
 }
 
 .center-image {
@@ -148,33 +192,6 @@ h3 {
   background-size: cover;
 }
 
-/* Next & previous buttons */
-/*.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: #fffafa;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-}*/
-
-/* Position the "next button" to the right */
-/*.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}*/
-
-/* On hover, add a black background color with a little bit see-through */
-/*.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}*/
-
-/* Caption text */
 .text {
   width: 390px;
   height: 100px;
@@ -189,18 +206,7 @@ h3 {
   text-align: right;
 }
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #fffafa;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
 .dot {
-  cursor:pointer;
   height: 13px;
   width: 13px;
   margin: 4px 2px 72px;
@@ -210,7 +216,7 @@ h3 {
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.active {
   background-color: #717171;
 }
 
@@ -243,21 +249,7 @@ h3 {
   color: #303030;
 }
 
-/********** SHOW ALL **********/
-.parallax {
-    /* The image used */
-    background-image: url("img_parallax.jpg");
-
-    /* Set a specific height */
-    min-height: 725px;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
+/********** vaction packages **********/
 
 .show-all {
   width: 100%;
@@ -265,12 +257,47 @@ h3 {
   background-color: #fffafa;
 }
 
-.image {
-  width: 150px;
-  height: 150px;
-  background-color: steelblue;
+.container {
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+    -moz-flex-flow: row wrap;
+    margin: 100px 30px 50px;
+    background-color: #fffafa;
+}
+/*don't delete*/
+.container .item {
 }
 
-.desc {
+.box {
+  display: inline-block;
+  text-align: center;
+  width: 300px;
+  height: 374px;
+  background-color: steelblue;
+  margin: 1em;
+}
 
+.img-container {
+  width: 100%;
+  height: 250px;
+  background-color: tan;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.package-title {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fffafa;
+  margin: 10px auto;
+  line-height: 25px;
 }
