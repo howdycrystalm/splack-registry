@@ -1,0 +1,108 @@
+.center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+h3 {
+  font-family: Tahoma, Helvetica , sans-serif
+  font-size: 15px;
+}
+
+/********** MODAL **********/
+#modal {
+    position: fixed;
+    font-family: Tahoma, Helvetica, sans-serif;
+    top: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    height: 100%;
+    width: 100%;
+}
+
+.modal-content {
+    position: absolute;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    padding: 20px;
+    /*display: flex;
+    justify-content: center;
+    text-align: center;*/
+}
+
+#modal-button {
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 15px 24px 15px 32px;
+  margin: 4px 2px;
+  font-size: 16px;
+  color: white;
+  background-color: #2196f3;
+  border: none;
+  cursor: pointer;
+}
+
+
+.top {
+  width: 600px;
+  height:430px;
+  /*background-color: aquamarine;*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.all {
+  width:100%;
+  height: 100vh;
+  background: coral;
+}
+
+.title-box {
+  /*background: red;*/
+  font-family: 'Cherry Swash', cursive;
+  font-size: 50px;
+  display: block;
+  bottom: 0;
+  color: #fff;
+}
+
+.text-box {
+  position: relative;
+  /*background: salmon;*/
+  font-size: 20px;
+  text-align: center;
+  maring-bottom: 10px;
+  color: #fff;
+}
+
+/**********  CAROUSEL **********/
+.container {
+  width: 300px;
+  height: 300px;
+  background-color: white;
+}
+
+.image {
+  width: 150px;
+  height: 150px;
+  background-color: steelblue;
+}
+
+.desc {
+
+}
